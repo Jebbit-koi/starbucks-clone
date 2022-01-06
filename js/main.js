@@ -36,3 +36,11 @@ window.addEventListener(
   }, 300)
 );
 // _.throttle(함수, 시간) 시간마다 함수 실행하도록 제어.
+
+const fadeEls = document.querySelectorAll(".visual .fade-in");
+fadeEls.forEach(function (fadeEl, index) {
+  gsap.to(fadeEl, 1, {
+    delay: (index + 1) * 0.7,
+    opacity: 1,
+  });
+});
